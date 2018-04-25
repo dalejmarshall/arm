@@ -121,8 +121,8 @@
     },
     {
       "apiVersion": "2016-09-01",
-      "type": "Microsoft.Network/virtualNetworks/provider/locks",
-      "name": "[concat(parameters('vnetName'), '/Microsoft.Authorization/siteLock')]",
+      "type": "Microsoft.Authorization/locks",
+      "name": "testLock",
       "dependsOn": [
         "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
       ],
