@@ -10,7 +10,7 @@
                     { "name": "GatewaySubnet", "addressPrefix": "10.0.0.0/24" },
                     { "name": "ManagementSubnet", "addressPrefix": "10.0.1.0/24" }
                 ],
-                "createGateway": false,
+                "createGateway": true,
                 "gatewaySku": "VpnGw1"
             }
         },

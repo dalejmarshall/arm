@@ -130,6 +130,18 @@
         "level": "CanNotDelete",
         "notes": "Prevent VNet from being deleted"
       }
+    },
+    {
+      "apiVersion": "2016-09-01",
+      "type": "Microsoft.Network/virtualNetworkGateways/providers/locks",
+      "name": "[concat(variables('gatewayName'), '/Microsoft.Authorization/LockGateway')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('gatewayName'))]"
+      ],
+      "properties":{
+        "level": "CanNotDelete",
+        "notes": "Prevent Gateway from being deleted"
+      }
     }
   ],
   "outputs": {
