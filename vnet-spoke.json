@@ -127,6 +127,18 @@
           ]
         }
       }
+    },
+    {
+      "apiVersion": "2016-09-01",
+      "type": "Microsoft.Network/virtualNetworks/providers/locks",
+      "name": "[concat(parameters('spoke').vnet.name, '/Microsoft.Authorization/LockSpokeVNet')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
+      ],
+      "properties":{
+        "level": "CanNotDelete",
+        "notes": "Prevent VNet from being deleted"
+      }
     }
   ],
   "outputs": {
