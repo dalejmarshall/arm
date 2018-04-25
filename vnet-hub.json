@@ -132,6 +132,7 @@
       }
     },
     {
+      "condition": "[parameters('createGateway')]",
       "apiVersion": "2016-09-01",
       "type": "Microsoft.Network/virtualNetworkGateways/providers/locks",
       "name": "[concat(variables('gatewayName'), '/Microsoft.Authorization/LockGateway')]",
