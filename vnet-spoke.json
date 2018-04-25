@@ -133,7 +133,7 @@
       "type": "Microsoft.Network/virtualNetworks/providers/locks",
       "name": "[concat(parameters('spoke').vnet.name, '/Microsoft.Authorization/LockSpokeVNet')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke').vnet.name)]"
       ],
       "properties":{
         "level": "CanNotDelete",
