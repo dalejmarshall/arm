@@ -136,7 +136,7 @@
       "type": "Microsoft.Network/virtualNetworkGateways/providers/locks",
       "name": "[concat(variables('gatewayName'), '/Microsoft.Authorization/LockGateway')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', variables('gatewayName'))]"
+        "[resourceId('Microsoft.Network/virtualNetworkGateways', variables('gatewayName'))]"
       ],
       "properties":{
         "level": "CanNotDelete",
