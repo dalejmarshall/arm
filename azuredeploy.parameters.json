@@ -10,7 +10,7 @@
                     { "name": "GatewaySubnet", "addressPrefix": "10.0.0.0/24" },
                     { "name": "ManagementSubnet", "addressPrefix": "10.0.1.0/24" }
                 ],
-                "createGateway": false,
+                "createGateway": true,
                 "gatewaySku": "VpnGw1"
             }
         },
@@ -20,14 +20,16 @@
                     "resourceGroup": "ansSpoke1",
                     "vnet": { "name": "ansSpoke1", "addressPrefixes": [ "10.1.0.0/16"  ] },
                     "subnets": [
-                        { "name": "workload", "addressPrefix": "10.1.0.0/24" }
+                        { "name": "public", "addressPrefix": "10.1.0.0/24" },
+                        { "name": "private", "addressPrefix": "10.1.1.0/24" }
                     ]
                 },
                 {
                     "resourceGroup": "ansSpoke2",
                     "vnet": { "name": "ansSpoke2", "addressPrefixes": [ "10.2.0.0/16"  ] },
                     "subnets": [
-                        { "name": "workload", "addressPrefix": "10.2.0.0/24" }
+                        { "name": "public", "addressPrefix": "10.2.0.0/24" },
+                        { "name": "private", "addressPrefix": "10.2.1.0/24" }
                     ]
                 }
             ]
